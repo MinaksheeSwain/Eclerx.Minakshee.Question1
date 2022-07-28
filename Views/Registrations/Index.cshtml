@@ -1,0 +1,42 @@
+﻿@model Eclerx.Minakshee.Question1.Models.Registration
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index<</h2>
+@*
+    
+<ul>
+    @foreach(var nu in Model)
+    {
+    <li>@nu.StudentId</li>
+    }
+    </ul>
+    *@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <table class="table table-Striped table-hover">
+                <tr>
+                    <th>StudentId</th>
+                    <th>UserId</th>
+                    <th>Passwords</th>
+                    <th>DateOfBirth</th>
+                    <th>MobileNo</th>
+                    <th>CreatedDate</th>
+                </tr>
+                @foreach(var nu in Model)
+            {
+                <tr>
+                    <td>@nu.StudentId</td>
+                    <td>@nu.UserId</td>
+                    <td>@nu.Passwords</td>
+                    <td>@nu.DateOfBirth</td>
+                    <td>@nu.MobileNo</td>
+                    <td>@nu.CreatedDate</td>
+                </tr>
+            }
+            </table>
+        </div>
+    </div>
+</div>
